@@ -7,6 +7,7 @@ dotenv.config({
 const generateJWT = (user, res, message, statusCode) => {
   let cokkieName = user.role === "admin" ? "adminToken" : "userToken";
   let token = user.generateJWT();
+  console.log(token);
   res
     .cookie(cokkieName, token, {
       httpOnly: true, // Prevents JavaScript access to the cookie
