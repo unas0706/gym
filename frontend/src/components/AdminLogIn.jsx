@@ -43,7 +43,6 @@ const AdminLogIn = () => {
           alert(`Error: ${error.response.data.err}`);
         }
       }
-      s;
     } else {
       alert("Enter Proper Phone Number");
     }
