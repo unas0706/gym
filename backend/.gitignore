@@ -21,8 +21,7 @@ coverage
 .grunt
 
 # Compiled source
-dist
-build
+# dist  # Comment out or remove this line
 
 # Dependency directories
 node_modules/
@@ -46,10 +45,15 @@ jspm_packages/
 *.sln
 
 # Environment variables
-.env
+.env/
 
 # Miscellaneous
 .DS_Store
 *.pem
 *.crt
 *.key
+
+.env*
+.flaskenv*
+!.env.project
+!.env.vault

@@ -5,7 +5,7 @@ import JsonWebToken from "jsonwebtoken";
 import dotenv from "dotenv";
 
 dotenv.config({
-  path: "../config.env",
+  path: "../.env",
 });
 
 const UserSchema = new mongoose.Schema({

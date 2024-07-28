@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 
 dotenv.config({
-  path: "../config.env",
+  path: "../.env",
 });
 
 const generateJWT = (user, res, message, statusCode) => {

@@ -8,7 +8,7 @@ import registerRouter from "./Routers/registerRouter.js";
 import cloudinary from "cloudinary";
 
 dotenv.config({
-  path: "./config.env",
+  path: "./.env",
 });
 
 const app = express();

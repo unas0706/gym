@@ -5,7 +5,7 @@ import asyncErrorHandler from "../Utility/asyncErrorHandler.js";
 import customError from "../Utility/CustomError.js";
 
 dotenv.config({
-  path: "../config.env",
+  path: "../.env",
 });
 
 const auth = (role) => {

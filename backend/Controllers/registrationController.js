@@ -19,7 +19,6 @@ export const userRegister = asyncErrorHandler(async (req, res, next) => {
   // let result = await cloudinary.uploader.upload(file.tempFilePath);
   // console.log(result);
   const user1 = await User.create(req.body);
-  console.log(user1);
   res.status(200).json({
     sucess: true,
     message: "User registered successfully",
@@ -28,7 +27,6 @@ export const userRegister = asyncErrorHandler(async (req, res, next) => {
 
 export const userLogin = asyncErrorHandler(async (req, res, next) => {
   let { Number, password, role } = req.body;
-  console.log(req.body);
   if (!Number || !password || !role) {
     return next(new customError(400, "Please fill the form"));
   }
