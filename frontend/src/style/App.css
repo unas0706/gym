@@ -52,7 +52,7 @@ body {
 }
 
 #logo-img {
-  background: url("icons/dumbbell.png");
+  background: url("../icons/dumbbell.png");
   background-size: 30% 70%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -428,7 +428,7 @@ body {
 .join-img {
   height: 100%;
   width: 40%;
-  background: url("./images/hightech.jpeg");
+  background: url("../images/hightech.jpeg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
