@@ -21,8 +21,8 @@ coverage
 .grunt
 
 # Compiled source
-dist
-build
+#dist
+#build
 
 # Dependency directories
 node_modules/
