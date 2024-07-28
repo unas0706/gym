@@ -12,7 +12,7 @@ const generateJWT = (user, res, message, statusCode) => {
       // secure: true,
       // sameSite: "Lax",
       // maxAge: process.env.COOKIE_EXPIRY * 100 * 60 * 60 * 24,
-      secure: true, // Ensures the cookie is only sent over HTTPS
+      // secure: true, // Ensures the cookie is only sent over HTTPS
       sameSite: "None", // Allows the cookie to be sent with cross-site requests
       maxAge: 7 * 24 * 60 * 60 * 1000, // Cookie expires in 7 days (milliseconds)
       path: "/", // The cookie is available for all paths on the domain
