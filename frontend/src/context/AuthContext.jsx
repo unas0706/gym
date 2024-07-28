@@ -23,6 +23,7 @@ export const AuthContextProvider = ({ children }) => {
       setautenticated(false);
     }
   };
+  console.log(user);
 
   useEffect(() => {
     const userToken = Cookies.get("userToken");
