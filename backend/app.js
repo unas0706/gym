@@ -23,7 +23,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://gym-frontend-56h0.onrender.com",
+    origin: "https://uagym.netlify.app",
     methods: ["POST", "GET", "PUT", "DELETE", "PATCH"],
     credentials: true,
     sameSite: "None",
