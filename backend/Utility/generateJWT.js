@@ -24,4 +24,6 @@ const generateJWT = (user, res, message, statusCode) => {
     });
 };
 
+console.log("Set-Cookie header:", res.getHeaders()["set-cookie"]);
+
 export default generateJWT;
