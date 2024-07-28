@@ -9,20 +9,15 @@ const generateJWT = (user, res, message, statusCode) => {
   let token = user.generateJWT();
   res
     .cookie(cokkieName, token, {
-      // secure: true,
-      // sameSite: "Lax",
-      // maxAge: process.env.COOKIE_EXPIRY * 100 * 60 * 60 * 24,
-      // secure: Lax, // Ensures the cookie is only sent over HTTPS
-      // sameSite: "None", // Allows the cookie to be sent with cross-site requests
-      maxAge: 7 * 24 * 60 * 60 * 1000, // Cookie expires in 7 days (milliseconds)
-      path: "/", // The cookie is available for all paths on the domain
+      sameSite: "none",
+      secure: true,
+      maxAge: process.env.COOKIE_EXPIRY * 100 * 60 * 60 * 24,
     })
     .status(statusCode)
     .json({
       sucess: true,
       message,
     });
-  console.log("Set-Cookie header:", res.getHeaders()["set-cookie"]);
 };
 
 export default generateJWT;
