@@ -9,8 +9,8 @@ const generateJWT = (user, res, message, statusCode) => {
   let token = user.generateJWT();
   res
     .cookie(cokkieName, token, {
-      secure: true, // Ensures cookies are sent only over HTTPS
-      sameSite: "none",
+      secure: true,
+      sameSite: "Lax",
       maxAge: process.env.COOKIE_EXPIRY * 100 * 60 * 60 * 24,
     })
     .status(statusCode)
