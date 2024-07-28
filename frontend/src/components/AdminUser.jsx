@@ -20,7 +20,7 @@ const AdminUser = () => {
   const deletUser = async () => {
     try {
       const res = await axios.delete(
-        `http://127.0.0.1:4000/deleteUser/${id.id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/deleteUser/${id.id}`,
         {
           withCredentials: true,
         }

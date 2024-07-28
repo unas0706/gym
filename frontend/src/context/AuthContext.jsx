@@ -9,9 +9,12 @@ export const AuthContextProvider = ({ children }) => {
   const [user, setuser] = useState(null);
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:4000/singleUser", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/singleUser`,
+        {
+          withCredentials: true,
+        }
+      );
       setuser(res.data.user);
     } catch (error) {
       if (error.response) {

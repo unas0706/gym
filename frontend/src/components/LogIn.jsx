@@ -8,19 +8,19 @@ const LogIn = () => {
   const pwdRef = useRef(null);
   const navigate = useNavigate();
   const { setautenticated, autenticated } = useContext(authContext);
-  console.log(autenticated);
   useEffect(() => {
     if (autenticated) {
       navigate("/singleUser");
     }
   });
   const login = async () => {
+    let url = import.meta.env.VITE_BACKEND_URL;
     const Number = numRef.current.value;
     const password = pwdRef.current.value;
     if (!isNaN(Number) && Number.length === 10) {
       try {
         const res = await axios.post(
-          "http://127.0.0.1:4000/userLogin",
+          `${import.meta.env.VITE_BACKEND_URL}/userLogin`,
           {
             Number,
             password,

@@ -15,7 +15,7 @@ const Join = () => {
     }
     try {
       const res = await axios.post(
-        "http://127.0.0.1:4000/sendMessage",
+        `${import.meta.env.VITE_BACKEND_URL}/sendMessage`,
         {
           name,
           Number,

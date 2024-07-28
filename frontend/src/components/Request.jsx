@@ -12,9 +12,12 @@ const Request = () => {
 
   const fetchMsgs = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:4000/getAllMessages", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/getAllMessages`,
+        {
+          withCredentials: true,
+        }
+      );
       setMsgs(res.data.data);
     } catch (error) {
       if (error.response) {

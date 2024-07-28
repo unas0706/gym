@@ -9,7 +9,7 @@ const ChangePassword = () => {
   const confirmPass = useRef(null);
   const navigate = useNavigate();
   const { autenticated, user } = useContext(authContext);
-  var url = `http://127.0.0.1:4000/changepassword/`;
+  var url = `${import.meta.env.VITE_BACKEND_URL}/changepassword/`;
 
   const back = () => {
     navigate("/singleUser");
@@ -19,7 +19,6 @@ const ChangePassword = () => {
     const password = pwd.current.value;
     const changePassword = changePWd.current.value;
     const confirmPassword = confirmPass.current.value;
-    console.log(password, changePassword, confirmPassword);
 
     if (
       user &&
@@ -27,7 +26,7 @@ const ChangePassword = () => {
       !isNaN(changePassword) &&
       !isNaN(confirmPassword)
     ) {
-      url = `http://127.0.0.1:4000/changepassword/${user._id}`;
+      url = `${import.meta.env.VITE_BACKEND_URL}/changepassword/${user._id}`;
       try {
         const res = await axios.patch(
           url,

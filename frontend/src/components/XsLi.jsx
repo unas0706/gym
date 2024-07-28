@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const XsLi = ({ name, setMyStyle }) => {
   const closeNav = () => {
-    console.log(12);
     setMyStyle({ display: "block" });
     const ele = document.getElementsByTagName("body")[0];
     ele.style.overflow = "hidden";

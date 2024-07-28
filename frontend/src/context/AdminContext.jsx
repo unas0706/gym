@@ -17,9 +17,12 @@ export const AdminContextProvider = ({ children }) => {
 
   const fetchAllUsers = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:4000/allusers", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/allusers`,
+        {
+          withCredentials: true,
+        }
+      );
       if (res.data.sucess) {
         setUsers(res.data.data);
       }

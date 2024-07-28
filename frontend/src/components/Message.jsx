@@ -5,14 +5,13 @@ const Message = ({ ele }) => {
   const DeleteMsg = async () => {
     try {
       const res = await axios.delete(
-        `http://127.0.0.1:4000/deleteMessage/${ele._id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/deleteMessage/${ele._id}`,
         {
           withCredentials: true,
         }
       );
-      console.log(res.data);
+      alert(res.data.message);
     } catch (error) {
-      console.log(error);
       if (error.response) {
         alert(`Error: ${error.response.data.err}`);
       }

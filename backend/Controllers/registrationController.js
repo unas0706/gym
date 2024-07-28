@@ -28,6 +28,7 @@ export const userRegister = asyncErrorHandler(async (req, res, next) => {
 
 export const userLogin = asyncErrorHandler(async (req, res, next) => {
   let { Number, password, role } = req.body;
+  console.log(req.body);
   if (!Number || !password || !role) {
     return next(new customError(400, "Please fill the form"));
   }

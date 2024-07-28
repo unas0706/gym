@@ -26,7 +26,7 @@ const EditUser = () => {
     }
     try {
       const res = await axios.patch(
-        `http://127.0.0.1:4000/updateUser/${id.id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/updateUser/${id.id}`,
         {
           Number,
           name,

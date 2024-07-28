@@ -25,7 +25,7 @@ const AddUser = () => {
     }
     try {
       const response = await axios.post(
-        "http://127.0.0.1:4000/addUser",
+        `${import.meta.env.VITE_BACKEND_URL}/addUser`,
         {
           Number,
           name,

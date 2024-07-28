@@ -46,15 +46,10 @@ jspm_packages/
 *.sln
 
 # Environment variables
-.env/
+.env
 
 # Miscellaneous
 .DS_Store
 *.pem
 *.crt
 *.key
-
-.env*
-.flaskenv*
-!.env.project
-!.env.vault

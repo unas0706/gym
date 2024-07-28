@@ -22,7 +22,7 @@ const AdminLogIn = () => {
     if (!isNaN(Number) && Number.length === 10) {
       try {
         const res = await axios.post(
-          "http://127.0.0.1:4000/userLogin",
+          `${import.meta.env.VITE_BACKEND_URL}/userLogin`,
           {
             Number,
             password,
@@ -43,6 +43,7 @@ const AdminLogIn = () => {
           alert(`Error: ${error.response.data.err}`);
         }
       }
+      s;
     } else {
       alert("Enter Proper Phone Number");
     }
@@ -51,7 +52,7 @@ const AdminLogIn = () => {
     <div className="logIn">
       <div className="logIn-con">
         <header className="login-header">
-          <h2 className="login-header-text">Log In</h2>
+          <h2 className="login-header-text">Admin Log In</h2>
         </header>
         <section className="login-form">
           <form
