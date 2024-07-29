@@ -18,6 +18,7 @@ const generateJWT = (user, res, message, statusCode) => {
       sucess: true,
       message,
     });
+  console.log(cokkieName);
 };
 
 export default generateJWT;

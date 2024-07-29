@@ -23,7 +23,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://gym-frontend-56h0.onrender.com",
+    origin: ["https://gym-frontend-56h0.onrender.com", "http://127.0.0.1:5173"],
     methods: ["POST", "GET", "PUT", "DELETE", "PATCH"],
     credentials: true,
     sameSite: "None",
