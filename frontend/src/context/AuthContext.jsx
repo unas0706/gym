@@ -26,7 +26,7 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const userToken = Cookies.get("userToken");
-    console.log(userToken, autenticated);
+    console.log(userToken);
     if (userToken) {
       setautenticated(true);
       fetchData();
