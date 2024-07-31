@@ -4,7 +4,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const LogIn = () => {
-  alert(import.meta.env.VITE_BACKEND_URL);
   const numRef = useRef(null);
   const pwdRef = useRef(null);
   const navigate = useNavigate();
