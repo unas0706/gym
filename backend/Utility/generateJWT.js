@@ -9,9 +9,8 @@ const generateJWT = (user, res, message, statusCode) => {
   let token = user.generateJWT();
   res
     .cookie(cokkieName, token, {
-      sameSite: "none",
+      sameSite: "None",
       secure: true,
-      // domain: "gym-frontend-56h0.onrender.com", // Use the correct domain
       maxAge: process.env.COOKIE_EXPIRY * 1000 * 60 * 60 * 24,
     })
     .status(statusCode)
