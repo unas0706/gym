@@ -64,7 +64,7 @@ app.get("/set-cookie", (req, res) => {
     .cookie("userToken", "", {
       secure: true, // Only set cookie over HTTPS
       sameSite: "None", // Allow cross-site cookies
-      maxAge: 24 * 60 * 60 * 1000, // 1 day in milliseconds
+      maxAge: 0, // 1 day in milliseconds
     })
     .send("Cookie is set");
 });
