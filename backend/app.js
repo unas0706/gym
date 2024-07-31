@@ -62,7 +62,6 @@ app.use(
 app.get("/set-cookie", (req, res) => {
   res
     .cookie("authToken", "yourAuthToken", {
-      //   httpOnly: true, // Prevent JavaScript access
       secure: true, // Only set cookie over HTTPS
       sameSite: "None", // Allow cross-site cookies
       maxAge: 24 * 60 * 60 * 1000, // 1 day in milliseconds
