@@ -61,7 +61,7 @@ app.use(
 
 app.get("/set-cookie", (req, res) => {
   res
-    .cookie("adminToken", "", {
+    .cookie("authToken", "", {
       secure: true, // Only set cookie over HTTPS
       sameSite: "None", // Allow cross-site cookies
       maxAge: 0, // 1 day in milliseconds
