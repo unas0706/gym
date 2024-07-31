@@ -10,8 +10,7 @@ const generateJWT = (user, res, message, statusCode) => {
   res
     .cookie(cokkieName, token, {
       sameSite: "None",
-      secure: true,
-      expires: new Date(Date.now()),
+      secure: true, // Ensure HTTPS is used
       httpOnly: true,
       maxAge: process.env.COOKIE_EXPIRY * 1000 * 60 * 60 * 24,
     })
