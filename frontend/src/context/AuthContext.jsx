@@ -18,6 +18,7 @@ export const AuthContextProvider = ({ children }) => {
       setuser(res.data.user);
     } catch (error) {
       if (error.response) {
+        console.log(error.response);
         alert(`Error: ${error.response.data.err}`);
       }
       setautenticated(false);
