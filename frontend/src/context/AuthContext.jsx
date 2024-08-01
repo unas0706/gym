@@ -26,6 +26,8 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    Cookies.remove("userToken");
+
     const userToken = Cookies.get("userToken");
     console.log(userToken);
     if (userToken) {
