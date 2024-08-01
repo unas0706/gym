@@ -2,6 +2,7 @@ import React, { useContext, useRef, useEffect } from "react";
 import { authContext } from "../context/AuthContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const LogIn = () => {
   const numRef = useRef(null);
@@ -34,7 +35,11 @@ const LogIn = () => {
           // localStorage.setItem("autenticated", true);
           setautenticated(true);
           navigate("/singleUser");
-          console.log(res.data);
+          Cookies.set("userToken", res.data.token, {
+            expires: 7,
+            path: "/",
+            secure: true,
+          });
         }
       } catch (error) {
         if (error.response) {
