@@ -40,6 +40,7 @@ const LogIn = () => {
           //   path: "/",
           //   secure: true,
           // });
+          Cookies.remove("userToken");
           console.log(res.headers);
         }
       } catch (error) {
