@@ -40,8 +40,26 @@ const LogIn = () => {
           //   path: "/",
           //   secure: true,
           // });
-          Cookies.remove("userToken");
-          console.log(res.headers);
+          console.log(
+            "Access-Control-Allow-Origin:",
+            res.headers["access-control-allow-origin"]
+          );
+          console.log(
+            "Access-Control-Allow-Credentials:",
+            res.headers["access-control-allow-credentials"]
+          );
+          console.log(
+            "Access-Control-Allow-Headers:",
+            res.headers["access-control-allow-headers"]
+          );
+          console.log(
+            "Access-Control-Allow-Methods:",
+            res.headers["access-control-allow-methods"]
+          );
+          console.log(
+            "Access-Control-Expose-Headers:",
+            res.headers["access-control-expose-headers"]
+          );
         }
       } catch (error) {
         if (error.response) {
