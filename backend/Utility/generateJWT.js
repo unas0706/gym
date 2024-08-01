@@ -26,6 +26,7 @@ const generateJWT = (user, res, message, statusCode) => {
     .json({
       sucess: true,
       message,
+      token,
     });
   console.log(cokkieName);
 };
