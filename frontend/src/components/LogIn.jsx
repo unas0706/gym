@@ -34,7 +34,7 @@ const LogIn = () => {
           // localStorage.setItem("autenticated", true);
           setautenticated(true);
           navigate("/singleUser");
-          console.log(res, autenticated);
+          console.log(res.data);
         }
       } catch (error) {
         if (error.response) {
