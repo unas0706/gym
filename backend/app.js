@@ -32,6 +32,13 @@ app.use(
     credentials: true,
     sameSite: "None",
     secure: true,
+    exposedHeaders: [
+      "Access-Control-Allow-Origin",
+      "Access-Control-Allow-Credentials",
+      "Access-Control-Allow-Headers",
+      "Access-Control-Allow-Methods",
+      "Access-Control-Expose-Headers",
+    ],
   })
 );
 
@@ -46,18 +53,6 @@ app.use(router);
 app.use(registerRouter);
 
 app.use(ErrorMiddleware);
-
-app.use(
-  cors({
-    origin: [
-      "https://gym-frontend-56h0.onrender.com", // Your deployed frontend
-      "https://uagym.netlify.app", // Another deployed frontend or subdomain
-      "http://127.0.0.1:5173", // Local development
-    ],
-    methods: ["POST", "GET", "PUT", "DELETE", "PATCH"],
-    credentials: true, // Allow cookies to be sent
-  })
-);
 
 app.get("/set-cookie", (req, res) => {
   res
