@@ -35,11 +35,12 @@ const LogIn = () => {
           // localStorage.setItem("autenticated", true);
           setautenticated(true);
           navigate("/singleUser");
-          Cookies.set("userToken", res.data.token, {
-            expires: 7,
-            path: "/",
-            secure: true,
-          });
+          // Cookies.set("userToken", res.data.token, {
+          //   expires: 7,
+          //   path: "/",
+          //   secure: true,
+          // });
+          console.log(res.headers);
         }
       } catch (error) {
         if (error.response) {
