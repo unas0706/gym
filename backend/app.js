@@ -42,6 +42,8 @@ app.use(
   })
 );
 
+app.options("*", cors()); // Include preflight requests
+
 app.use(express.json());
 app.use(
   express.urlencoded({
